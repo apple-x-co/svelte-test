@@ -2,7 +2,7 @@
     import { goto } from "$app/navigation";
     import { nickname } from '../stores.js';
 
-    let name = '';
+    let name = $nickname;
 
     async function handleSubmit () {
         // console.log(name);
