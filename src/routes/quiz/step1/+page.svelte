@@ -1,13 +1,9 @@
 <script>
     import { goto } from "$app/navigation";
-    import { nickname } from '../stores.js';
-
-    let name = $nickname;
+    import { answer } from '../stores.js';
 
     async function handleSubmit () {
-        // console.log(name);
-        nickname.set(name);
-        goto('/quiz/step2');
+        await　goto('/quiz/step2');
     }
 </script>
 
@@ -15,7 +11,7 @@
 
 <div>
     <form method="post" on:submit|preventDefault="{handleSubmit}">
-        Name: <input name="name" required minlength="1" maxlength="6" bind:value={name} />
+        Name: <input required minlength="1" maxlength="6" bind:value={$answer.nickname} />
         <button>Next</button>
     </form>
 </div>
