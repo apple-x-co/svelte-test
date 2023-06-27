@@ -1,4 +1,5 @@
 <script>
+    import { beforeUpdate } from "svelte";
     import { goto } from '$app/navigation'
     import { answer } from '../stores.js';
 
@@ -9,6 +10,12 @@
     async function handleBack () {
         await　goto('/quiz/step1');
     }
+
+    beforeUpdate(() => {
+        if ($answer.nickname === null) {
+            goto('/quiz/step1');
+        }
+    });
 </script>
 
 <h2>Quiz / step2</h2>
