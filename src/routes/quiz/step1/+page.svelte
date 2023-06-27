@@ -11,7 +11,9 @@
 
 <div>
     <form method="post" on:submit|preventDefault="{handleSubmit}">
-        Name: <input required minlength="1" maxlength="6" bind:value={$answer.nickname} />
+        <lable>
+            Name: <input required minlength="1" maxlength="6" bind:value={$answer.nickname} />
+        </lable>
         <button>Next</button>
     </form>
 </div>
