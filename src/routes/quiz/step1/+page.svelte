@@ -7,7 +7,7 @@
     }
 </script>
 
-<h2>Quiz / step1</h2>
+<h2>Step1</h2>
 
 <div>
     <form method="post" on:submit|preventDefault="{handleSubmit}">
